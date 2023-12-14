@@ -23,7 +23,7 @@ sudo su - postgres -c "createuser -s ${OE_USER}"
 
 echo -e "\n---- Installing wkhtmltopdf ----\n"
 
-if [[ $(lsb_release -r -s) == "22.04" ]]; then
+if [ $(lsb_release -r -s) == "22.04" ]; then
     WKHTMLTOX_X64="https://packages.ubuntu.com/jammy/wkhtmltopdf"
     WKHTMLTOX_X32="https://packages.ubuntu.com/jammy/wkhtmltopdf"
     #No Same link works for both 64 and 32-bit on Ubuntu 22.04
