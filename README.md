@@ -6,19 +6,19 @@
 
 ##### 1. Download the script:
 ```
-sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/odoo13.sh
+sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/main/odoo13.sh
 ```
 ```
-sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/odoo15.sh
+sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/main/odoo15.sh
 ```
 ```
-sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/odoo16.sh
+sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/main/odoo16.sh
 ```
 ```
-sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/odoo17.sh
+sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/main/odoo17.sh
 ```
 ```
-sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/odoo18.sh
+sudo wget https://raw.githubusercontent.com/mrwattoo/install-odoo/main/odoo18.sh
 ```
 
 
