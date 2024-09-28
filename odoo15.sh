@@ -54,6 +54,16 @@ sudo su root -c "printf 'db_user = ${OE_USER}\n' >> /etc/${OE_USER}.conf"
 sudo su root -c "printf 'db_password = False\n' >> /etc/${OE_USER}.conf"
 sudo su root -c "printf 'addons_path = /opt/${OE_USER}/odoo/addons,/opt/${OE_USER}/odoo-custom-addons\n' >> /etc/${OE_USER}.conf"
 sudo su root -c "printf 'xmlrpc_port = 1500\n' >> /etc/${OE_USER}.conf"
+sudo su root -c "printf 'logfile = /var/log/${OE_USER}/${OE_USER}.log\n' >> /etc/${OE_USER}.conf"
+
+echo -e "\n---- Creating Log Directory ----\n"
+
+sudo mkdir /var/log/${OE_USER}
+
+echo -e "\n---- Creating Log File ----\n"
+
+sudo touch /var/log/${OE_USER}/${OE_USER}.log
+sudo chmod -R 777 /var/log/${OE_USER}
 
 
 
