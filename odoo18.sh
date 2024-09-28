@@ -2,7 +2,9 @@
 
 
 echo -e "\n Installaion of ODOO18 Process Start\n"
+
 OE_USER="odoo18"
+
 echo -e "\n---- Update Server ----\n"
 
 sudo apt update
@@ -57,6 +59,14 @@ sudo su root -c "printf 'addons_path = /opt/${OE_USER}/odoo/addons,/opt/${OE_USE
 sudo su root -c "printf 'xmlrpc_port = 1800\n' >> /etc/${OE_USER}.conf"
 sudo su root -c "printf 'logfile = /var/log/${OE_USER}/${OE_USER}.log\n' >> /etc/${OE_USER}.conf"
 
+echo -e "\n---- Creating Log Directory ----\n"
+
+sudo mkdir /var/log/${OE_USER}
+
+echo -e "\n---- Creating Log File ----\n"
+
+sudo touch /var/log/${OE_USER}/${OE_USER}.log
+sudo chmod -R 777 /var/log/${OE_USER}
 
 
 echo -e "\n---- Creating Service File ----\n"
