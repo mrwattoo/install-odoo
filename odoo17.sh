@@ -87,6 +87,10 @@ sudo su root -c "printf 'User=${OE_USER}\n' >> /etc/systemd/system/${OE_USER}.se
 sudo su root -c "printf 'Group=${OE_USER}\n' >> /etc/systemd/system/${OE_USER}.service"
 sudo su root -c "printf 'ExecStart=/opt/${OE_USER}/odoo-venv/bin/python3 /opt/${OE_USER}/odoo/odoo-bin -c /etc/${OE_USER}.conf\n' >> /etc/systemd/system/${OE_USER}.service"
 sudo su root -c "printf 'StandardOutput=journal+console\n' >> /etc/systemd/system/${OE_USER}.service"
+sudo su root -c "printf 'ExecReload=/bin/kill -HUP $MAINPID\n' >> /etc/systemd/system/${OE_USER}.service"
+sudo su root -c "printf 'KillMode=process\n' >> /etc/systemd/system/${OE_USER}.service"
+sudo su root -c "printf 'Restart=always\n' >> /etc/systemd/system/${OE_USER}.service"
+sudo su root -c "printf 'LimitNOFILE=8192\n' >> /etc/systemd/system/${OE_USER}.service"
 
 sudo su root -c "printf '[Install]\n' >> /etc/systemd/system/${OE_USER}.service"
 sudo su root -c "printf 'WantedBy=multi-user.target\n' >> /etc/systemd/system/${OE_USER}.service"
